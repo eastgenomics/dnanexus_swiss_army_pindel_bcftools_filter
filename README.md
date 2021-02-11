@@ -2,7 +2,7 @@
 This repository contains the commands executed by the swiss army knife app (v4.0.1) to filter the pindel output VCF files 
 
 ## Input
-The input files for this app includes a bash script(pindel_filtering_v1.0*.sh) and vcfs produced by pindel.
+The input files for this app includes a bash script(pindel_filtering_v*.sh) and vcfs produced by pindel.
 
 The app's "command line" input is used to execute the above bash script. This command is recorded in command_line_input.sh
 
