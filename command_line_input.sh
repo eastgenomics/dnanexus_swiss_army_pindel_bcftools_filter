@@ -1,1 +1,1 @@
-sh pindel_filtering_v1.0.0*.sh
+sh pindel_filtering_v*.sh
