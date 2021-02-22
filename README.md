@@ -9,10 +9,8 @@ The app's "command line" input is used to execute the above bash script. This co
 ## How the app works
 - creates a gz and index for VCF (bgzip and tabix)
 - keeps indels only in exons of interest (bcftools view -i)
-- keeps insertions only if the length is larger than 2bp (bcftools view -i 'INFO/SVLEN > 2')
-- keeps deletions only if the length is larger than 2bp (bcftools view -i 'INFO/SVLEN < -2')
-- concats the two vcfs (insertions and deletions) to generate a single filtered indel (bcftools concat)
-- sorts the vcf by ascending chromosomal position (vcf-sort -c)
+- keeps insertions only if the length is equal and larger than 3bp and deletions only if the length is equal and larger than 3bp (bcftools view -i 'INFO/SVLEN > 2 || INFO/SVLEN < -2' )
+- creates a gz and index for filtered VCF (bgzip and tabix)
 
 ## Output
 Filtered VCFs have a suffix of filtered.vcf.gz. The final filtered VCF is a compressed vcf (.vcf.gz).
